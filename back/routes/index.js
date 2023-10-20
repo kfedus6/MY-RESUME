@@ -10,7 +10,7 @@ const educationRouter = require('./educationRouter')
 router.use('/aboutMe', aboutMeRouter)
 router.use('/links', linksRouter)
 router.use('/skills', skillsRouter)
-router.use('portfolio', portfolioRouter)
+router.use('/portfolio', portfolioRouter)
 router.use('/experience', experienceRouter)
 router.use('/education', educationRouter)
 

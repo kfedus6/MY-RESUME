@@ -4,7 +4,7 @@ const portfolioController = require('../controllers/portfolioController')
 
 router.post('/', portfolioController.createPortfolio)
 router.get('/', portfolioController.findAllPortfolios)
-router.patch('/', portfolioController.updatePortfolio)
-router.delete('/', portfolioController.destroyPortfolio)
+router.patch('/:id', portfolioController.updatePortfolio)
+router.delete('/:id', portfolioController.destroyPortfolio)
 
 module.exports = router

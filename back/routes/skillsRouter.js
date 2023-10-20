@@ -4,7 +4,7 @@ const skillsController = require('../controllers/skillsController')
 
 router.post('/', skillsController.createSkill)
 router.get('/', skillsController.findAllSkills)
-router.patch('/', skillsController.updateSkill)
-router.delete('/', skillsController.destroySkill)
+router.patch('/:id', skillsController.updateSkill)
+router.delete('/:id', skillsController.destroySkill)
 
 module.exports = router

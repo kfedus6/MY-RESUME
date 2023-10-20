@@ -4,7 +4,7 @@ const linksController = require('../controllers/linksController')
 
 router.post('/', linksController.createLink)
 router.get('/', linksController.findAllLinks)
-router.patch('/', linksController.updateLink)
-router.delete('/', linksController.destroyLink)
+router.patch('/:id', linksController.updateLink)
+router.delete('/:id', linksController.destroyLink)
 
 module.exports = router

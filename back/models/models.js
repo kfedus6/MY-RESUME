@@ -10,6 +10,7 @@ const AboutMe = sequelize.define('aboutMe', {
     description: { type: DataTypes.STRING, unique: true },
     email: { type: DataTypes.STRING, unique: true },
     phone: { type: DataTypes.STRING, unique: true },
+    image: { type: DataTypes.STRING },
 })
 
 const Links = sequelize.define('links', {

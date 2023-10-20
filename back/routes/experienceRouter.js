@@ -4,7 +4,7 @@ const experienceController = require('../controllers/experienceController')
 
 router.post('/', experienceController.createExperience)
 router.get('/', experienceController.findAllExperiences)
-router.patch('/', experienceController.updateExperience)
-router.delete('/', experienceController.destroyExperience)
+router.patch('/:id', experienceController.updateExperience)
+router.delete('/:id', experienceController.destroyExperience)
 
 module.exports = router
