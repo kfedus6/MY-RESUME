@@ -2,7 +2,6 @@ const { AboutMe } = require('../models/models')
 const ApiError = require('../exceptions/appiError')
 const uuid = require('uuid')
 const path = require('path')
-const { where } = require('sequelize')
 
 class AboutMeController {
     async createAboutMe(req, res, next) {
