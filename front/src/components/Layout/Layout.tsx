@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer"
 const Layout = () => {
     return (
         <div>
-            <header>
+            <header className="fixed w-full shadow-md flex justify-center items-center bg-slate-50">
                 <Header />
             </header>
             <main>
