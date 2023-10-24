@@ -15,7 +15,11 @@ const Footer = () => {
             <h2 className="font-bold text-2xl">Let's Talk</h2>
             <div className="flex gap-5">
                 {links.map((link: any) => (
-                    <img key={link.id} src={`http://127.0.0.1:5000/${link.image}`} alt={link.title} />
+                    <div className="cursor-pointer transition ease-in hover:-translate-y-1 hover:scale-110 duration-300" key={link.id}>
+                        <a target="_blank" href={link.link}>
+                            <img src={`http://127.0.0.1:5000/${link.image}`} alt={link.title} />
+                        </a>
+                    </div>
                 ))}
             </div>
             <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam.</p>

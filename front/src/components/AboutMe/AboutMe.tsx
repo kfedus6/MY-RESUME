@@ -23,16 +23,23 @@ const AboutMe = () => {
                     </div>
                     <div className="flex gap-8">
                         <button className="btn btn-black text-white font-bold">Hire Me</button>
-                        <button className="btn btn-white text-black font-bold">Resume</button>
+                        <button className="btn btn-white text-black font-bold">
+                            <span>Resume</span>
+                            <img className="w-4" src={`http://127.0.0.1:5000/download.png`} alt="dow" />
+                        </button>
                     </div>
                     <div className="flex gap-5">
                         {links.map((link: any) => (
-                            <img key={link.id} src={`http://127.0.0.1:5000/${link.image}`} alt={link.title} />
+                            <div className="cursor-pointer transition ease-in hover:-translate-y-1 hover:scale-110 duration-300" key={link.id}>
+                                <a target="_blank" href={link.link}>
+                                    <img src={`http://127.0.0.1:5000/${link.image}`} alt={link.title} />
+                                </a>
+                            </div>
                         ))}
                     </div>
                 </div>
-                <div>
-                    <img className="w-4/5 rounded-md" src={`http://127.0.0.1:5000/${aboutMe.image}`} alt="i'm" />
+                <div className="flex justify-center items-center">
+                    <img className="w-11/12 rounded-md" src={`http://127.0.0.1:5000/${aboutMe.image}`} alt="i'm" />
                 </div>
             </div>
         </div>
