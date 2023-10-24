@@ -23,9 +23,9 @@ const Header = () => {
     }, [])
 
     return (
-        <div className="w-11/12 p-5 flex justify-between items-center">
+        <div className="w-10/12 p-5 flex justify-between items-center">
             <div>
-                <h1 className="font-bold text-lg">{aboutMe.name} {aboutMe.lastName}</h1>
+                <h1 className="font-bold text-lg cursor-default">{aboutMe.name} {aboutMe.lastName}</h1>
             </div>
             <nav>
                 <ul className="flex items-center gap-12">

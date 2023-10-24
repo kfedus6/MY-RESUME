@@ -10,7 +10,7 @@
 
 @layer components {
     .btn {
-        @apply flex opacity-80 transform ease-out duration-300 gap-2 items-center cursor-pointer text-white py-2 px-5 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-400;
+        @apply flex opacity-90 transform ease-out duration-300 gap-2 items-center cursor-pointer py-2 px-5 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-400;
     }
     .link-animation {
         @apply transform ease-out duration-300 hover:bg-gray-950 rounded-md p-2 hover:text-slate-100 active:text-white focus:text-white;
@@ -20,5 +20,11 @@
     }
     .btn-blue {
         @apply bg-blue-600 hover:opacity-100 hover:shadow-inner hover:scale-105;
+    }
+    .btn-white {
+        @apply bg-white hover:opacity-100 hover:shadow-inner hover:scale-105;
+    }
+    .btn-black {
+        @apply bg-black hover:opacity-100 hover:shadow-inner hover:scale-105;
     }
 }
