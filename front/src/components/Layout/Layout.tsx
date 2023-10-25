@@ -14,7 +14,7 @@ const Layout = () => {
 
     return (
         <div>
-            <header className={scroll > 50 ? "transition duration-300 ease-in fixed w-full flex justify-center items-center shadow-lg bg-slate-100" : "fixed w-full flex justify-center items-center transition duration-300 ease-in"}>
+            <header className={scroll > 50 ? "transition duration-300 ease-in fixed w-full flex justify-center items-center shadow-xl bg-white z-50" : "fixed w-full flex justify-center items-center transition duration-300 ease-in"}>
                 <Header />
             </header>
             <main>
