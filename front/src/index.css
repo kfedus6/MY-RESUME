@@ -12,6 +12,9 @@
     .btn {
         @apply flex opacity-90 transform ease-out duration-300 gap-2 items-center cursor-pointer py-2 px-5 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-400;
     }
+    .input {
+        @apply transform ease-out duration-300 mt-1 cursor-default block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 hover:border-yellow-400;
+    }
     .link-animation {
         @apply transform ease-out duration-300 hover:bg-gray-950 rounded-md p-2 hover:text-slate-100 active:text-white focus:text-white;
     }
@@ -26,5 +29,8 @@
     }
     .btn-black {
         @apply bg-black hover:opacity-100 hover:shadow-inner hover:scale-105;
+    }
+    .btn-yellow {
+        @apply bg-yellow-400 hover:opacity-100 hover:shadow-inner hover:scale-105 font-bold;
     }
 }

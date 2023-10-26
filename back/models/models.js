@@ -37,8 +37,9 @@ const Portfolio = sequelize.define('portfolio', {
 const Experience = sequelize.define('experience', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     company: { type: DataTypes.STRING },
+    title: { type: DataTypes.STRING },
     time: { type: DataTypes.STRING },
-    description: { type: DataTypes.STRING },
+    description: { type: DataTypes.TEXT },
 })
 
 const Education = sequelize.define('education', {
@@ -46,7 +47,7 @@ const Education = sequelize.define('education', {
     education: { type: DataTypes.STRING },
     title: { type: DataTypes.STRING },
     time: { type: DataTypes.STRING },
-    description: { type: DataTypes.STRING },
+    description: { type: DataTypes.TEXT },
 })
 
 module.exports = { AboutMe, Links, Skills, Portfolio, Experience, Education }

@@ -4,9 +4,10 @@ const ApiError = require('../exceptions/appiError')
 class ExperienceController {
     async createExperience(req, res, next) {
         try {
-            const { company, time, description } = req.body
+            const { company, time, description, title } = req.body
             const experience = await Experience.create({
                 company: company,
+                title: title,
                 time: time,
                 description: description
             })
@@ -17,7 +18,6 @@ class ExperienceController {
     }
     async findAllExperiences(req, res, next) {
         try {
-            const { company, time, description } = req.body
             const experience = await Experience.findAll()
             return res.json(experience)
         } catch (error) {
@@ -26,11 +26,12 @@ class ExperienceController {
     }
     async updateExperience(req, res, next) {
         try {
-            const { company, time, description } = req.body
+            const { company, time, description, title } = req.body
             const { id } = req.params
             const experience = await Experience.findOne({ where: { id: id } })
             const newExperience = await Experience.update({
                 company: company ? company : experience.company,
+                title: title ? title : experience.title,
                 time: time ? time : experience.time,
                 description: description ? description : experience.description,
             }, { where: { id: experience.id } })
