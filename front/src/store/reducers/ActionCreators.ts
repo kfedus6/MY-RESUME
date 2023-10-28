@@ -60,3 +60,11 @@ export const fetchGetEducation = () => async (dispatch: AppDispatch) => {
         console.log(error)
     }
 }
+
+export const fetchSendEmail = (obj: any) => async (dispatch: AppDispatch) => {
+    try {
+        await $host.post('/sendEmail', obj)
+    } catch (error: any) {
+        console.log(error)
+    }
+}
