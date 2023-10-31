@@ -48,9 +48,9 @@ const AboutMe: FC = () => {
                     <div>
                         <motion.p custom={1} variants={animationXMinus} className="font-bold text-lg cursor-default uppercase">Hello, I'm {aboutMe.name} {aboutMe.lastName}</motion.p>
                         <motion.p custom={2} variants={animationXMinus} className="font-bold text-lg cursor-default text-yellow-500">Web Developer</motion.p>
-                        <motion.p custom={3} variants={animationXMinus} className="text-sm cursor-default">Lorem, ipsum dolor sit amet consectetur adipisicing.</motion.p>
+                        <motion.p custom={3} variants={animationXMinus} className="text-sm cursor-default">{aboutMe.description}.</motion.p>
                     </div>
-                    <motion.div custom={4} variants={animationXMinus} className="flex gap-8">
+                    <motion.div custom={6} variants={animationXMinus} className="flex gap-8">
                         <button className="flex justify-center w-36 btn btn-black text-white font-bold">
                             <a href="#contactHome">Hire Me</a>
                         </button>

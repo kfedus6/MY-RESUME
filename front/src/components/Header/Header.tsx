@@ -14,12 +14,33 @@ const Header = () => {
     useEffect(() => {
         const links = document.querySelectorAll('nav a')
 
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.active')?.classList.remove('active')
-                link.classList.add('active')
+        document.addEventListener('scroll', () => {
+            links.forEach(l => {
+                if (window.scrollY >= 0 && l.textContent === 'Home') {
+                    document.querySelector('.active')?.classList.remove('active')
+                    l.classList.add('active')
+                } else if (window.scrollY > 600 && l.textContent === 'Skills') {
+                    document.querySelector('.active')?.classList.remove('active')
+                    l.classList.add('active')
+                } else if (window.scrollY > 1400 && l.textContent === 'Works') {
+                    document.querySelector('.active')?.classList.remove('active')
+                    l.classList.add('active')
+                } else if (window.scrollY > 2150 && l.textContent === 'Resume') {
+                    document.querySelector('.active')?.classList.remove('active')
+                    l.classList.add('active')
+                } else if (window.scrollY > 2750 && l.textContent === 'Contact') {
+                    document.querySelector('.active')?.classList.remove('active')
+                    l.classList.add('active')
+                }
             })
         })
+
+        // links.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         document.querySelector('.active')?.classList.remove('active')
+        //         link.classList.add('active')
+        //     })
+        // })
     }, [])
 
     const textAnimation = {

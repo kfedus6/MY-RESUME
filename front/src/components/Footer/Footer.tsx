@@ -1,14 +1,16 @@
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../hooks/redux"
-import { fetchGetLinks } from "../../store/reducers/ActionCreators"
+import { fetchGetAboutMe, fetchGetLinks } from "../../store/reducers/ActionCreators"
 import { motion } from "framer-motion"
 
 const Footer = () => {
     const dispatch = useAppDispatch()
     const { links }: any = useAppSelector(state => state.linksSlice)
+    const { aboutMe }: any = useAppSelector(state => state.aboutMeSlice)
 
     useEffect(() => {
         dispatch(fetchGetLinks())
+        dispatch(fetchGetAboutMe())
     }, [])
 
     const animationYMinus = {
@@ -51,7 +53,7 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
             className="flex flex-col justify-center items-center pt-10 pb-10 gap-10">
-            <motion.h2 custom={2} variants={animationY} className="font-bold text-2xl">Let's Talk</motion.h2>
+            <motion.h2 custom={2} variants={animationY} className="font-bold text-2xl cursor-default">Let's Talk</motion.h2>
             <motion.div custom={1} variants={animation} className="flex gap-5">
                 {links.map((link: any) => (
                     <div className="cursor-pointer transition ease-in hover:-translate-y-1 hover:scale-110 duration-200" key={link.id}>
@@ -61,7 +63,8 @@ const Footer = () => {
                     </div>
                 ))}
             </motion.div>
-            <motion.p custom={2} variants={animationYMinus} className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam.</motion.p>
+            <motion.p custom={2} variants={animationYMinus} className="text-sm cursor-default">{aboutMe.description}.</motion.p>
+            <motion.p custom={3} variants={animationYMinus} className="text-sm cursor-default font-bold">{aboutMe.country}, {aboutMe.town}</motion.p>
         </motion.div>
     )
 }
