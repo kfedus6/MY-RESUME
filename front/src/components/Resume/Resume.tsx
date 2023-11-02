@@ -79,8 +79,8 @@ const Resume = () => {
                         <motion.div custom={2} variants={animationXMinus} className="flex flex-col gap-7 border-2 border-yellow-400 rounded-lg p-3 overflow-auto touch-none">
                             {experience.map((exp: any) => (
                                 <div key={exp.id} className="flex flex-col gap-1">
-                                    <h3 className="font-bold cursor-default text-lg">{exp.company}</h3>
-                                    <span className="text-sm cursor-default text-slate-600">{exp.title}</span>
+                                    <h3 className="font-bold cursor-default text-lg">{exp.title}</h3>
+                                    <span className="text-sm cursor-default text-slate-600">{exp.company}</span>
                                     <span className="text-sm cursor-default text-yellow-400">{exp.time}</span>
                                     <p className="text-sm cursor-default text-slate-600">{exp.description}</p>
                                 </div>
