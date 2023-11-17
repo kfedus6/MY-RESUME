@@ -8,13 +8,13 @@
 <p style="font-size: 25px;"><strong>Website</strong></p>
 
 <div style="display:flex;justify-content: space-around;align-items: center">
-   <img src="/README/portfolio.png" alt="after" width="700px" height="400px"/>
+   <img src="/README/portfolio.png" alt="after" width="800px" height="400px"/>
 </div>
 
 ---
 
 
 <div style="display:flex;justify-content: space-around;align-items: center">
-   <img src="/README/port.wmv" alt="after" width="700px" height="400px"/>
+   <img src="/README/portfolio.png" alt="after" width="800px" height="400px"/>
 </div>
 
