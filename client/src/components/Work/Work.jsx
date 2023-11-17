@@ -18,7 +18,7 @@ const Work = () => {
         },
         visible: (custom) => ({
             opacity: 1,
-            transition: { ease: "easeOut", duration: 0.7, delay: custom * 0.2 }
+            transition: { ease: "easeOut", duration: 0.7, delay: custom * 0.3 }
         })
     }
 
@@ -39,7 +39,8 @@ const Work = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            id="worksHome" className="flex justify-center items-center pt-20 pb-20">
+            id="worksHome"
+            className="flex justify-center items-center pt-20 pb-20">
             <div className="flex flex-col gap-10 w-10/12">
                 <div className="flex flex-col gap-2">
                     <motion.h2 custom={1} variants={animation} className="font-bold text-xl cursor-default">Works</motion.h2>

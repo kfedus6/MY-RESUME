@@ -55,7 +55,7 @@ const AboutMe = () => {
                             <a href="#contactHome">Hire Me</a>
                         </button>
                         <button className="flex justify-center w-36 btn btn-white text-black font-bold">
-                            <a href="http://127.0.0.1:5000/MykolaFedusResume.pdf" target="_blank">Resume</a>
+                            <a href="http://127.0.0.1:5000/FedusMykolaResume.pdf" target="_blank">Resume</a>
                             <img className="w-4" src={`http://127.0.0.1:5000/download.png`} alt="dow" />
                         </button>
                     </motion.div>
@@ -70,7 +70,7 @@ const AboutMe = () => {
                     </motion.div>
                 </div>
                 <motion.div custom={1} variants={animationX} className="flex justify-center items-center">
-                    <img className="w-11/12 rounded-md" src={`http://127.0.0.1:5000/${aboutMe.image}`} alt="i'm" />
+                    <img className="w-10/12 rounded-md" src={`http://127.0.0.1:5000/${aboutMe.image}`} alt="i'm" />
                 </motion.div>
             </div>
         </motion.div >
