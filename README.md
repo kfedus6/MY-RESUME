@@ -15,6 +15,6 @@
 
 
 <div style="display:flex;justify-content: space-around;align-items: center">
-   <img src="/README/portfolio.png" alt="after" width="800px" height="400px"/>
+   <img src="/README/port.gif" alt="after" width="800px" height="400px"/>
 </div>
 
